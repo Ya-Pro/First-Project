@@ -1,0 +1,561 @@
+:root {
+  --whiteColor: rgb(255, 255, 255);
+  --spanColor: rgb(0, 75, 73);
+  --purpleColor: rgb(85, 0, 60);
+  --bbgc: rgb(227, 227, 227);
+  --secbgc: rgb(154, 154, 154);
+  --mainPadding: 2%;
+  --mainPara: rgb(195, 195, 195);
+  --starsColor: orange;
+}
+@font-face {
+  font-family: Jost;
+  src: url(../Jost-SemiBoldItalic.ttf);
+}
+@font-face {
+  font-family: Lalytta;
+  src: url(../Lalytta.otf) format(true type);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Lalytta;
+  text-decoration: none;
+  list-style: none;
+  letter-spacing: 0.1rem;
+  word-spacing: 0.2rem;
+}
+html {
+  font-size: 16px;
+  background-color: var (--bgc);
+  scroll-behavior: smooth;
+}
+.home {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.home header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--bbgc);
+  box-shadow: 0 0.1rem 0.2rem var(--purpleColor);
+  padding: 1rem 1.5rem;
+  z-index: 10;
+  position: sticky;
+  top: 0.1rem;
+}
+.home header h2 {
+  color: var(--purpleColor);
+  pointer-events: none;
+  font-size: 1rem;
+  cursor: pointer;
+}
+h2 span {
+  font-size: 1.3rem;
+  color: rgb(0, 68, 72);
+  cursor: pointer;
+}
+header ul li {
+  display: inline-block;
+  padding: 0.5rem 0.7rem;
+  margin: 0.4rem 0.5rem;
+}
+header ul li a {
+  font-size: 1rem;
+  color: var(--purpleColor);
+  background-color: transparent;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+header ul li i {
+  color: var(--whiteColor);
+  margin-right: 0.2rem;
+  font-size: 130%;
+  transition: 0.4s;
+}
+header ul li a:hover i {
+  color: var(--purpleColor);
+}
+header ul li:first-child a {
+  color: var(--whiteColor);
+  font-size: 1.2rem;
+}
+header ul li:first-child:hover a {
+  color: var(--purpleColor);
+}
+header ul li a:hover {
+  color: var(--whiteColor);
+}
+header .btn {
+  color: var(--purpleColor);
+  background-color: var(--whiteColor);
+  border-radius: 1.4rem;
+  border: 0.15rem solid transparent;
+  transition: 0.4s;
+  padding: 0.4rem 0.8rem;
+}
+header .btn:hover {
+  color: var(--whiteColor);
+  background-color: var(--purpleColor);
+  border: 0.15rem solid var(--whiteColor);
+}
+.connection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section {
+  width: 100%;
+  background-color: var(--bbgc);
+  display: flex;
+  justify-content: space-around;
+  align-items: space-between;
+  flex-grow: 1;
+  padding: 2rem 1.2rem;
+  box-shadow: 0 0.2rem 0.3rem var(--purpleColor);
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.content h4 {
+  font-size: 2rem;
+  color: var(--purpleColor);
+  pointer-events: none;
+}
+.content h5 {
+  font-size: 1.5rem;
+  color: var(--purpleColor);
+  margin-bottom: 1.2rem;
+  pointer-events: none;
+}
+.content h1 {
+  color: var(--purpleColor);
+  margin: 0.5rem;
+  font-size: 2.5rem;
+  pointer-events: none;
+}
+.content h1 span {
+  font-size: 2rem;
+}
+.Connection img {
+  transition: 0.5s;
+}
+.Connection img:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+section .meeting img {
+  width: 25rem;
+  height: 25rem;
+  opacity: 0.8;
+  transition: 0.8s;
+  border-radius: 2rem;
+}
+section .meeting img:hover {
+  opacity: 1;
+  cursor: pointer;
+  transform: translateY(3rem);
+}
+.cars-models {
+  display: flex;
+  flex-flow: column wrap;
+  background-color: var(--secbgc);
+  position: relative;
+  background-color: var(--secbgc);
+}
+
+.cars-models h1 {
+  position: relative;
+  color: var(--purpleColor);
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.cars-models h1 span {
+  color: black;
+  font-size: 2.2rem;
+}
+.cars {
+  display: flex;
+  justify-content: center;
+  flex-flow: column wrap;
+  gap: 2.5rem;
+  height: 90vh;
+}
+.cars .first-row {
+  display: flex;
+  justify-content: center;
+}
+.first-row .car {
+  max-width: 30rem;
+  height: 16rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.car img:hover {
+  transform: translateX(1rem) rotate(5deg);
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.car img:hover .car h2 {
+  transform: translateX(-1rem) rotate(-5deg);
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.car h4,
+h2 {
+  font-size: 0.8rem;
+  color: var(--purpleColor);
+}
+.car h4 i {
+  color: var(--whiteColor);
+  margin: 0.5rem 0.2rem;
+}
+.car h2 span {
+  font-size: 1.1rem;
+  color: var(--spanColor);
+}
+.inspiration {
+  padding: var(--mainPadding) 1rem;
+  background-color: var(--secbgc);
+}
+.inspiration h2 {
+  font-size: 1.7rem;
+  color: var(--purpleColor);
+  text-align: center;
+}
+.inspiration h2 span {
+  font-size: 1.4rem;
+  color: rgb(0, 255, 157);
+}
+.inspiration .content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+}
+.content .text {
+  display: grid;
+  gap: 1rem;
+  padding: 1.6rem 1rem;
+  justify-items: center;
+}
+.text h3 {
+  color: var(--purpleColor);
+  font-size: 2rem;
+  text-align: center;
+}
+.text h3 span {
+  color: var(--whiteColor);
+  font-size: 1.8rem;
+}
+.text p {
+  font-size: 1.2rem;
+  color: var(--whiteColor);
+  letter-spacing: 0.1rem;
+  line-height: 1.6;
+}
+.text button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 16rem;
+  height: 4rem;
+  padding: 1.2rem 2.2rem;
+  border: 0.2rem solid transparent;
+  border-radius: 1.2rem;
+  font-size: 1.1rem;
+  color: var(--purpleColor);
+}
+.text button i {
+  position: relative;
+  font-size: 2rem;
+  margin: 0.5rem;
+}
+.text button:hover {
+  background-color: var(--purpleColor);
+  color: var(--whiteColor);
+  transition: all 0.5s;
+  border: 0.2rem solid var(--whiteColor);
+  cursor: pointer;
+}
+.content .img {
+  margin: 2.5rem;
+}
+.content .img img {
+  transform: scale(0.9);
+  border-radius: 2rem;
+}
+.content .img img:nth-child(even):hover {
+  transition: 1s;
+  transform: translate(-1.2rem) scale(1);
+}
+.content .img img:nth-child(odd):hover {
+  transition: 1s;
+  transform: translate(1.2rem) scale(1);
+}
+button i {
+  cursor: pointer;
+  font-size: 3rem;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  color: black;
+}
+/* the hambargur menu */
+#hambargur {
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  display: none;
+}
+/* responsive website */
+@media screen and (max-width: 575px) {
+  html {
+    font-size: 10px;
+  }
+  #hambargur {
+  display: block;
+  margin-right: 2rem;
+}
+.home {
+  overflow: hidden;
+}
+.list {
+  position: absolute;
+  width: 15rem;
+  top: 10%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  right: -100%;
+  transition: all .3s ease-out;
+  border-radius: 1rem ;
+
+}
+.list a {
+  display: blcok;
+  font-size: 1.2rem;
+  color: #ff8000;
+  margin: 1rem 0;
+  padding: 1rem;
+}
+.open {
+  right: 2%;
+}
+  .cars {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+  }
+  .cars .first-row {
+    width: 45%;
+    display: grid;
+  }
+  .cars .first-row .car {
+    width: 100%;
+    margin-top: 5rem;
+  }
+  .car .img img {
+    width: 20rem;
+  }
+  .text {
+    padding: 1rem;
+  }
+  .text p {
+    font-size: 90%;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  html {
+    font-size: 12px;
+  }
+  #hambargur {
+  display: block;
+  margin-right: 2rem;
+}
+.home {
+  overflow: hidden;
+}
+.list {
+  position: absolute;
+  width: 15rem;
+  top: 10%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  right: -100%;
+  transition: all .3s ease-out;
+  border-radius: 1rem ;
+
+}
+.list a {
+  display: blcok;
+  font-size: 1.2rem;
+  color: #ff8000;
+  margin: 1rem 0;
+  padding: 1rem;
+}
+.open {
+  right: 2%;
+}
+  .cars {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+  }
+  .cars .first-row {
+    width: 45%;
+    display: grid;
+  }
+  .cars .first-row .car {
+    width: 100%;
+    margin-top: 5rem;
+  }
+  .car .img img {
+    width: 20rem;
+  }
+  .text {
+    padding: 1rem;
+  }
+  .text p {
+    font-size: 90%;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 991px) {
+  html {
+    font-size: 14px;
+  }
+  #hambargur {
+  display: block;
+  margin-right: 2rem;
+}
+.home {
+  overflow: hidden;
+}
+.list {
+  position: absolute;
+  width: 15rem;
+  top: 11%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  right: -100%;
+  transition: all .3s ease-out;
+  border-radius: 1rem ;
+
+}
+.list a {
+  display: blcok;
+  font-size: 1.2rem;
+  color: #ff8000;
+  margin: 1rem 0;
+  padding: 1rem;
+}
+.open {
+  right: 2%;
+}
+  .cars {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+  }
+  .cars .first-row {
+    width: 45%;
+    display: grid;
+  }
+  .cars .first-row .car {
+    width: 100%;
+    margin-top: 5rem;
+  }
+  .car .img img {
+    width: 20rem;
+  }
+  .text {
+    padding: 1rem;
+  }
+  .text p {
+    font-size: 90%;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1400px) {
+  html {
+    font-size: 16px;
+  }
+  #hambargur {
+  display: block;
+  margin-right: 2rem;
+}
+.home {
+  overflow: hidden;
+}
+.list {
+  position: absolute;
+  width: 15rem;
+  top: 10%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  right: -100%;
+  transition: all .3s ease-out;
+  border-radius: 1rem ;
+
+}
+.list a {
+  display: blcok;
+  font-size: 1.2rem;
+  color: #460066;
+  margin: 1rem 0;
+  padding: 1rem;
+}
+
+.open {
+  right: 2%;
+}
+  .cars {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+  }
+  .cars .first-row {
+    width: 45%;
+    display: grid;
+  }
+  .cars .first-row .car {
+    width: 100%;
+    margin-top: 5rem;
+  }
+  .car .img img {
+    width: 20rem;
+  }
+  .text {
+    padding: 1rem;
+  }
+  .text p {
+    font-size: 90%;
+  }
+}
